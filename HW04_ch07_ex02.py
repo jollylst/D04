@@ -21,15 +21,27 @@
 
 ###############################################################################
 # Imports
-
+import math
 
 # Body
-
+def eval_loop():
+	equation_input = ''
+	result = ''
+	while True:
+		try:
+			equation_input = input('Please enter your equation for evaluation:\n')
+			if equation_input == 'done':
+				return result
+			result = eval(equation_input)
+			print(result)
+		except:
+			print('Invalid input, please try again...')
+			continue
 
 ###############################################################################
 def main():
-    pass  # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+    # Remove this line and uncomment below once eval_loop is defined.
+    eval_loop()
 
 if __name__ == '__main__':
     main()
